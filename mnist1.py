@@ -10,9 +10,8 @@ import graphviz
 # load the Iris dataset
 mnist = load_digits()
 X, y = mnist.data, mnist.target
-#X, y = load_digits(return_X_y=True)
-
 classNames = (mnist.target_names).astype(str)
+
 # create and print the decision tree
 dtc = tree.DecisionTreeClassifier(criterion="entropy")
 dtc.fit(X, y)

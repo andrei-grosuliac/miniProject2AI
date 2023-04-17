@@ -10,8 +10,7 @@ import graphviz
 # load the Iris dataset
 iris = load_iris()
 X, y = iris.data, iris.target
-# print((iris.target_names[1]))
-# print((iris.target[1]))
+
 # create and print the decision tree
 dtc = tree.DecisionTreeClassifier(criterion="entropy")
 dtc.fit(X, y)
@@ -29,6 +28,3 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 y_pred = dtc.predict(X_test)
 print(classification_report(y_test, y_pred))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
-
-val = input("Enter your value: ")
-print(val)
